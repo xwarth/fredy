@@ -63,8 +63,6 @@ RUN ln -s /db /fredy/db \
   && ln -s /conf /fredy/conf
 
 EXPOSE 9998
-VOLUME /db
-VOLUME /conf
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
   CMD curl -f http://localhost:9998/ || exit 1
